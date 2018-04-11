@@ -1,0 +1,104 @@
+﻿<Page
+    x:Class="CC.View.AboutView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="using:CC.Converters">
+    <Page.Resources>
+        <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Name="titleGrid"
+              VerticalAlignment="Top"
+              Style="{ThemeResource HeaderGridStyle}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Name="titleBlock"
+                       Style="{ThemeResource AppTitleTextBlockStyle}"
+                       TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"
+                       Margin="12,0,0,0"
+                       x:Uid="AboutTitle"/>
+        </Grid>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Name="inner">
+            <StackPanel Padding="12,20">
+                <StackPanel.Transitions>
+                    <TransitionCollection>
+                        <EntranceThemeTransition/>
+                    </TransitionCollection>
+                </StackPanel.Transitions>
+                
+                <!--Title-->
+                <TextBlock Text="{StaticResource AppName}" Style="{ThemeResource SubheaderTextBlockStyle}"/>
+                <!--Version number and last update date-->
+                <TextBlock Text="{x:Bind ViewModel.Version}" Style="{ThemeResource BaseTextBlockStyle}"/>
+                <TextBlock Text="{x:Bind ViewModel.LastUpdateDate}" Margin="0,0,0,20"/>
+                <!--Descriptions-->
+                <TextBlock Style="{ThemeResource TitleTextBlockStyle}" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap"
+                           x:Uid="Development"/>
+                <TextBlock x:Uid="OlegSamoylov" Margin="0,0,0,20"/>
+                <TextBlock x:Uid="Idea" Style="{ThemeResource TitleTextBlockStyle}"/>
+                <TextBlock x:Uid="RomanGladkikh" Margin="0,0,0,20"/>
+                <TextBlock x:Uid="Logo" Style="{ThemeResource TitleTextBlockStyle}"/>
+                <TextBlock x:Uid="AndrewCircus" Margin="0,0,0,20"/>
+                <!--Social links-->
+                <TextBlock x:Uid="ContactUs"
+                       Style="{ThemeResource SubtitleTextBlockStyle}"
+                       TextTrimming="CharacterEllipsis" TextWrapping="NoWrap"
+                       Margin="0,0,0,5"/>
+                <HyperlinkButton Content="Facebook" NavigateUri="https://facebook.com/crosswordcreator"
+                             Style="{ThemeResource TextBlockButtonStyle}"/>
+                <HyperlinkButton x:Uid="VK" NavigateUri="https://vk.com/crosswordcreator"
+                             Style="{ThemeResource TextBlockButtonStyle}"/>
+                <HyperlinkButton x:Uid="Mail" Command="{x:Bind ViewModel.SendMailCommand}"
+                             Style="{ThemeResource TextBlockButtonStyle}"
+                             Margin="0,0,0,12"/>
+
+                <!--Social links-->
+                <TextBlock x:Uid="UsefulLinks"
+                       Style="{ThemeResource SubtitleTextBlockStyle}"
+                       TextTrimming="CharacterEllipsis" TextWrapping="NoWrap"
+                       Margin="0,0,0,5"/>
+                <!--<HyperlinkButton x:Uid="Website" NavigateUri="https://crosswordcreator.azurewebsites.net/"
+                             Style="{ThemeResource TextBlockButtonStyle}"/>-->
+                <HyperlinkButton x:Uid="RatingsReviews" Command="{x:Bind ViewModel.RateCommand}"
+                             Style="{ThemeResource TextBlockButtonStyle}"/>
+                <HyperlinkButton x:Uid="ShareLink" Command="{x:Bind ViewModel.ShareLinkCommand}"
+                             Style="{ThemeResource TextBlockButtonStyle}"/>
+                <HyperlinkButton x:Uid="FeedbackHub" Command="{x:Bind ViewModel.GoToFeedbackHubCommand}"
+                             Style="{ThemeResource TextBlockButtonStyle}"
+                             Visibility="{x:Bind ViewModel.IsFeedbackHyperlinkVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="windowStates">
+                <VisualState x:Name="middleState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="640"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="titleGrid.Padding" Value="0"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="narrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="titleGrid.Padding" Value="48,0,0,0"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

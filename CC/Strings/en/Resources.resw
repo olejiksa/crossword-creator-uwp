@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutSplitViewItem" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutTitle.Text" xml:space="preserve">
+    <value>ABOUT</value>
+  </data>
+  <data name="AndrewCircus.Text" xml:space="preserve">
+    <value>Andrew Circus</value>
+  </data>
+  <data name="ContactUs.Text" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="Development.Text" xml:space="preserve">
+    <value>Development</value>
+  </data>
+  <data name="FeedbackHub.Content" xml:space="preserve">
+    <value>Feedback Hub</value>
+  </data>
+  <data name="FillingSplitViewItem" xml:space="preserve">
+    <value>Filling</value>
+  </data>
+  <data name="FillingTitle.Text" xml:space="preserve">
+    <value>FILLING</value>
+  </data>
+  <data name="GridEditorSplitViewItem" xml:space="preserve">
+    <value>Grid editor</value>
+  </data>
+  <data name="GridEditorTitle.Text" xml:space="preserve">
+    <value>GRID EDITOR</value>
+  </data>
+  <data name="HomeSplitViewItem" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="HomeTitle.Text" xml:space="preserve">
+    <value>HOME</value>
+  </data>
+  <data name="Idea.Text" xml:space="preserve">
+    <value>Idea</value>
+  </data>
+  <data name="ListEditorSplitViewItem" xml:space="preserve">
+    <value>List editor</value>
+  </data>
+  <data name="ListEditorTitle.Text" xml:space="preserve">
+    <value>LIST EDITOR</value>
+  </data>
+  <data name="Logo.Text" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="Mail.Content" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="OlegSamoylov.Text" xml:space="preserve">
+    <value>Oleg Samoylov</value>
+  </data>
+  <data name="RatingsReviews.Content" xml:space="preserve">
+    <value>Rate and review</value>
+  </data>
+  <data name="RomanGladkikh.Text" xml:space="preserve">
+    <value>Roman Gladkikh</value>
+  </data>
+  <data name="ShareLink.Content" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="UsefulLinks.Text" xml:space="preserve">
+    <value>Useful links</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VK.Content" xml:space="preserve">
+    <value>VK</value>
+  </data>
+  <data name="Website.Content" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="ShareWebsiteLink" xml:space="preserve">
+    <value>Link to Crossword Creator in the Store</value>
+  </data>
+  <data name="HomeDescription.Text" xml:space="preserve">
+    <value>The unique app with which you can create and fill wonderful crosswords</value>
+  </data>
+  <data name="HomeEditorBefore.Text" xml:space="preserve">
+    <value>Go to the</value>
+  </data>
+  <data name="HomeFilling.Text" xml:space="preserve">
+    <value>fill</value>
+  </data>
+  <data name="HomeFillingAfter.Text" xml:space="preserve">
+    <value>the crossword puzzle</value>
+  </data>
+  <data name="HomeFillingBefore.Text" xml:space="preserve">
+    <value>Start to</value>
+  </data>
+  <data name="HomeGridEditor.Text" xml:space="preserve">
+    <value>grid editor</value>
+  </data>
+  <data name="HomeGridEditorAfter.Text" xml:space="preserve">
+    <value>and create a crossword puzzle from the list</value>
+  </data>
+  <data name="HomeListEditor.Text" xml:space="preserve">
+    <value>list editor</value>
+  </data>
+  <data name="HomeListEditorAfter.Text" xml:space="preserve">
+    <value>and make a list of terms</value>
+  </data>
+  <data name="HomeSubtitle.Text" xml:space="preserve">
+    <value>Just three easy steps</value>
+  </data>
+  <data name="UntitledGrid" xml:space="preserve">
+    <value>Untitled crossword</value>
+  </data>
+  <data name="UntitledList" xml:space="preserve">
+    <value>Untitled list</value>
+  </data>
+  <data name="Add.Label" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddButton.Content" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddListWordTitle.Text" xml:space="preserve">
+    <value>ADD A TERM</value>
+  </data>
+  <data name="Answer.Header" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="Delete.Label" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteItem.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="EditButton.Content" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditListWordTitle.Text" xml:space="preserve">
+    <value>EDIT THE TERM</value>
+  </data>
+  <data name="FillingNoItems.Text" xml:space="preserve">
+    <value>Maybe fill a crossword puzzle?</value>
+  </data>
+  <data name="GridEditorNoItems.Text" xml:space="preserve">
+    <value>Maybe create a crossword puzzle?</value>
+  </data>
+  <data name="GridNoItemsTitle.Text" xml:space="preserve">
+    <value>Here's empty</value>
+  </data>
+  <data name="ListEditorNoItems.Text" xml:space="preserve">
+    <value>Add here anything</value>
+  </data>
+  <data name="ListEditorNoItemsTitle.Text" xml:space="preserve">
+    <value>Here's very lonely</value>
+  </data>
+  <data name="New.Label" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="New.ToolTipService.ToolTip" xml:space="preserve">
+    <value>New (Ctrl+N)</value>
+  </data>
+  <data name="Open.Label" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Open.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Open (Ctrl+O)</value>
+  </data>
+  <data name="Question.Header" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="Save.Label" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Save.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Save (Ctrl+S)</value>
+  </data>
+  <data name="SaveAs.Label" xml:space="preserve">
+    <value>Save as</value>
+  </data>
+  <data name="SaveAs.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Save as (Ctrl+Shift+S)</value>
+  </data>
+  <data name="SaveSimple.Label" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="NoItems.Text" xml:space="preserve">
+    <value>No items</value>
+  </data>
+  <data name="Print.Label" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="Print.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Print (Ctrl+P)</value>
+  </data>
+  <data name="QuestionsTitle.Text" xml:space="preserve">
+    <value>QUESTIONS</value>
+  </data>
+  <data name="Share.Label" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="WordsTitle.Text" xml:space="preserve">
+    <value>WORDS</value>
+  </data>
+  <data name="CrosswordCreatorGridFile" xml:space="preserve">
+    <value>Crossword Creator Grid File</value>
+  </data>
+  <data name="CrosswordCreatorListFile" xml:space="preserve">
+    <value>Crossword Creator List File</value>
+  </data>
+  <data name="OpenGrid.Label" xml:space="preserve">
+    <value>Open grid</value>
+  </data>
+  <data name="OpenList.Label" xml:space="preserve">
+    <value>Open list</value>
+  </data>
+  <data name="AddGridWordTitle.Text" xml:space="preserve">
+    <value>SELECT A WORD</value>
+  </data>
+  <data name="Check.Label" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="CrosswordTitle.Text" xml:space="preserve">
+    <value>CROSSWORD</value>
+  </data>
+  <data name="Questions.Label" xml:space="preserve">
+    <value>Questions</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Save changes in</value>
+  </data>
+  <data name="SaveChangesTitle" xml:space="preserve">
+    <value>There're unsaved changes</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CrosswordFilledIsCorrectly" xml:space="preserve">
+    <value>Wonderful! You've filled the crossword puzzle is absolutely true!</value>
+  </data>
+  <data name="CrosswordFilledIsCorrectlyTitle" xml:space="preserve">
+    <value>Crossword puzzle is filled correctly</value>
+  </data>
+  <data name="CrosswordFilledIsNotCorrectly" xml:space="preserve">
+    <value>Mistakes had been made when you was filling out the crossword puzzle. Do you want to see them?</value>
+  </data>
+  <data name="CrosswordFilledIsNotCorrectlyTitle" xml:space="preserve">
+    <value>Crossword puzzle is filled incorrectly</value>
+  </data>
+  <data name="CrosswordGridFile" xml:space="preserve">
+    <value>a crossword grid file</value>
+  </data>
+  <data name="CrosswordListFile" xml:space="preserve">
+    <value>a crossword list file</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NotSupportedDroppedFile" xml:space="preserve">
+    <value>You may place here only</value>
+  </data>
+  <data name="NotSupportedDroppedFileTitle" xml:space="preserve">
+    <value>File isn't supported</value>
+  </data>
+  <data name="OpenFileError" xml:space="preserve">
+    <value>Unfortunately, an error has occurred while opening the file.</value>
+  </data>
+  <data name="OpenFileErrorTitle" xml:space="preserve">
+    <value>Opening error</value>
+  </data>
+  <data name="PrintFileError" xml:space="preserve">
+    <value>Unfortunately, an error has occurred while printing the file.</value>
+  </data>
+  <data name="PrintFileErrorTitle" xml:space="preserve">
+    <value>Printing error</value>
+  </data>
+  <data name="SaveFileError" xml:space="preserve">
+    <value>Unfortunately, an error has occurred while saving the file.</value>
+  </data>
+  <data name="SaveFileErrorTitle" xml:space="preserve">
+    <value>Saving error</value>
+  </data>
+  <data name="SelectOperationWithLoadedGridFile" xml:space="preserve">
+    <value>Do you want to fill this crossword puzzle? Select "No" to change it.</value>
+  </data>
+  <data name="SelectOperationWithLoadedGridFileTitle" xml:space="preserve">
+    <value>Crossword puzzle</value>
+  </data>
+  <data name="SelectOperationWithLoadedListFile" xml:space="preserve">
+    <value>Do you want to create a new list based on the loaded crossword? If you want to add words to the current list, select "No".</value>
+  </data>
+  <data name="SelectOperationWithLoadedListFileTitle" xml:space="preserve">
+    <value>List of definitions</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="HideMenu" xml:space="preserve">
+    <value>Hide menu</value>
+  </data>
+  <data name="ShowMenu" xml:space="preserve">
+    <value>Show menu</value>
+  </data>
+  <data name="AppDescription" xml:space="preserve">
+    <value>Crossword Creator is an entertaining application that helps to spend time making and filling crossword puzzles on your Windows 10 PC, tablet or smartphone or a sheet of paper. To make a crossword puzzle, you should create questions and answers to them and place words on the conditional crossword grid where you can host them on your own. In the end, you can share the unique crossword with friends or family to exciting pastime.</value>
+  </data>
+</root>

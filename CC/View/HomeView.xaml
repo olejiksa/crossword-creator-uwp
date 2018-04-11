@@ -1,0 +1,205 @@
+﻿<Page
+    x:Class="CC.View.HomeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Style="{ThemeResource HeaderGridStyle}" Name="titleGrid" Margin="272,0,0,0">
+            <TextBlock Name="titleBlock"
+                       Style="{ThemeResource AppTitleTextBlockStyle}" x:Uid="HomeTitle"/>
+        </Grid>
+
+        <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto" Name="inner">
+            <ScrollViewer.Transitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition/>
+                </TransitionCollection>
+            </ScrollViewer.Transitions>
+            
+            <StackPanel Name="content"
+                        Padding="12">
+                
+                <TextBlock Margin="0,0,0,10"
+                           Style="{ThemeResource SubheaderTextBlockStyle}"
+                           Text="{StaticResource AppName}"
+                           TextAlignment="Center"/>
+                <TextBlock x:Uid="HomeDescription" Margin="0,0,0,20"
+                           Style="{ThemeResource BodyTextBlockStyle}"
+                           TextAlignment="Center"/>
+                <TextBlock x:Uid="HomeSubtitle" Style="{ThemeResource SubtitleTextBlockStyle}"
+                           TextAlignment="Center"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition MaxWidth="250"/>
+                        <ColumnDefinition MaxWidth="250"/>
+                        <ColumnDefinition MaxWidth="250"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Margin="0,20" Name="block1">
+                        <FontIcon Name="icon1"
+                                  Glyph="&#xE1EE;" FontSize="72" Style="{ThemeResource HomeViewFontIconStyle}"
+                                  Margin="0,0,0,10"/>
+                        <TextBlock TextAlignment="Center" Style="{ThemeResource BodyTextBlockStyle}">
+                            <Run x:Uid="HomeEditorBefore"/>
+                            <Hyperlink UnderlineStyle="None">
+                                <i:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="Click">
+                                        <core:InvokeCommandAction Command="{x:Bind ViewModel.GoToListEditorView}"/>
+                                    </core:EventTriggerBehavior>
+                                </i:Interaction.Behaviors>
+                                <Hyperlink.Inlines>
+                                    <Run x:Uid="HomeListEditor"/>
+                                </Hyperlink.Inlines>
+                            </Hyperlink>
+                            <Run x:Uid="HomeListEditorAfter"/>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="0,20" Name="block2" Grid.Row="1">
+                        <FontIcon Name="icon2"
+                                  Glyph="&#xE80A;" FontSize="72" Style="{ThemeResource HomeViewFontIconStyle}"
+                                  Margin="0,0,0,10"/>
+                        <TextBlock TextAlignment="Center" Style="{ThemeResource BodyTextBlockStyle}">
+                            <Run x:Uid="HomeEditorBefore"/>
+                            <Hyperlink UnderlineStyle="None">
+                                <i:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="Click">
+                                        <core:InvokeCommandAction Command="{x:Bind ViewModel.GoToGridEditorView}"/>
+                                    </core:EventTriggerBehavior>
+                                </i:Interaction.Behaviors>
+                                <Hyperlink.Inlines>
+                                    <Run x:Uid="HomeGridEditor"/>
+                                </Hyperlink.Inlines>
+                            </Hyperlink>
+                            <Run  x:Uid="HomeGridEditorAfter"/>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="0,20" Name="block3" Grid.Row="2">
+                        <FontIcon Name="icon3"
+                                  Glyph="&#xE104;" FontSize="72" Style="{ThemeResource HomeViewFontIconStyle}"
+                                  Margin="0,0,0,10"/>
+                        <TextBlock TextAlignment="Center" Style="{ThemeResource BodyTextBlockStyle}">
+                            <Run x:Uid="HomeFillingBefore"/>
+                            <Hyperlink UnderlineStyle="None">
+                                <i:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="Click">
+                                        <core:InvokeCommandAction Command="{x:Bind ViewModel.GoToFillingView}"/>
+                                    </core:EventTriggerBehavior>
+                                </i:Interaction.Behaviors>
+                                <Hyperlink.Inlines>
+                                    <Run x:Uid="HomeFilling"/>
+                                </Hyperlink.Inlines>
+                            </Hyperlink>
+                            <Run x:Uid="HomeFillingAfter"/>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="windowStates">
+                <VisualState x:Name="bigState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1366"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="titleGrid.Padding" Value="12,0,0,0"/>
+                        <Setter Target="content.HorizontalAlignment" Value="Center"/>
+                        <Setter Target="content.VerticalAlignment" Value="Center"/>
+                        <Setter Target="block1.(Grid.Column)" Value="0"/>
+                        <Setter Target="block2.(Grid.Column)" Value="1"/>
+                        <Setter Target="block3.(Grid.Column)" Value="2"/>
+                        <Setter Target="block1.(Grid.Row)" Value="0"/>
+                        <Setter Target="block2.(Grid.Row)" Value="0"/>
+                        <Setter Target="block3.(Grid.Row)" Value="0"/>
+                        <Setter Target="block1.Padding" Value="20"/>
+                        <Setter Target="block2.Padding" Value="20"/>
+                        <Setter Target="block3.Padding" Value="20"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="wideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="titleGrid.Padding" Value="12,0,0,0"/>
+                        <Setter Target="content.HorizontalAlignment" Value="Center"/>
+                        <Setter Target="content.VerticalAlignment" Value="Center"/>
+                        <Setter Target="block1.(Grid.Column)" Value="0"/>
+                        <Setter Target="block2.(Grid.Column)" Value="1"/>
+                        <Setter Target="block3.(Grid.Column)" Value="2"/>
+                        <Setter Target="block1.(Grid.Row)" Value="0"/>
+                        <Setter Target="block2.(Grid.Row)" Value="0"/>
+                        <Setter Target="block3.(Grid.Row)" Value="0"/>
+                        <Setter Target="block1.Padding" Value="20,20"/>
+                        <Setter Target="block2.Padding" Value="20,20"/>
+                        <Setter Target="block3.Padding" Value="20,20"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="middleState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="640"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="titleGrid.Padding" Value="12,0,0,0"/>
+                        <Setter Target="content.HorizontalAlignment" Value="Center"/>
+                        <Setter Target="content.VerticalAlignment" Value="Center"/>
+                        <Setter Target="icon1.FontSize" Value="54"/>
+                        <Setter Target="icon2.FontSize" Value="54"/>
+                        <Setter Target="icon3.FontSize" Value="54"/>
+                        <Setter Target="block1.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="block2.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="block3.(Grid.ColumnSpan)" Value="3"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="littleState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="360"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="titleGrid.Padding" Value="60,0,0,0"/>
+                        <Setter Target="content.Margin" Value="0,10,0,0"/>
+                        <Setter Target="icon1.FontSize" Value="36"/>
+                        <Setter Target="icon2.FontSize" Value="36"/>
+                        <Setter Target="icon3.FontSize" Value="36"/>
+                        <Setter Target="block1.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="block2.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="block3.(Grid.ColumnSpan)" Value="3"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="narrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="titleGrid.Padding" Value="60,0,0,0"/>
+                        <Setter Target="content.Margin" Value="0,10,0,0"/>
+                        <Setter Target="content.HorizontalAlignment"
+                                Value="Center" />
+                        <Setter Target="content.Margin" Value="0,10,0,0"/>
+                        <Setter Target="icon1.FontSize" Value="36"/>
+                        <Setter Target="icon2.FontSize" Value="36"/>
+                        <Setter Target="icon3.FontSize" Value="36"/>
+                        <Setter Target="block1.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="block2.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="block3.(Grid.ColumnSpan)" Value="3"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>
